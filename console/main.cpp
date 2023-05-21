@@ -20,57 +20,8 @@
 #include <sys/time.h>
 #include <unistd.h>
 
-struct CanMessage final
-{
-    struct ID final
-    {
-        inline static int Door = 411;
-        inline static int Signal = 392;
-        inline static int Speed = 580;
-    };
-
-    struct Position final
-    {
-        inline static int Door = 2;
-        inline static int Signal = 0;
-        inline static int Speed = 3;
-    };
-
-    struct Length final
-    {
-        inline static int Door = Position::Door + 1;
-        inline static int Signal = Position::Door + 1;
-        inline static int Speed = Position::Speed + 2;
-    };
-
-    struct Equipment final
-    {
-        inline static int LeftSignal = 1;
-        inline static int RightSignal = 2;
-        inline static int Door1 = 1;
-        inline static int Door2 = 2;
-        inline static int Door3 = 4;
-        inline static int Door4 = 8;
-    };
-};
-
-struct Car final
-{
-    struct Status final
-    {
-	struct Door final
-	{
-	    inline static int Locked = 0;
-	    inline static int Unlocked = 1;
-	};
-
-	struct TurnSignal final
-	{
-	    inline static int Off = 0;
-	    inline static int On = 1;
-	};
-    };
-};
+#include "../common/can.hpp"
+#include "../common/car.hpp"
 
 class Console
 {
