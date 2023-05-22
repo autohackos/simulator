@@ -23,6 +23,7 @@ To compile, you can clone the repository, and build using cmake
 git clone https://github.com/autohackos/simulator
 cd simulator
 mkdir build
+cd build
 cmake ..
 make
 ```
