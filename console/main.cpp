@@ -22,6 +22,7 @@
 
 #include "../common/can.hpp"
 #include "../common/car.hpp"
+#include "../common/ConfigurationParser.hpp"
 
 class Console
 {
@@ -285,6 +286,13 @@ public:
 
 int main()
 {
+    ConfigurationParser parser("./config.json");
+    if (!parser.parse())
+    {
+	std::cerr << "Error: could not parse configuration file." << std::endl;
+	return -100;
+    }
+
     Console car_console;
     car_console.run();
     return 0;
