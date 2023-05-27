@@ -1,0 +1,35 @@
+{
+    "car":{
+	"maximum_speed": 90.0,
+	"acceleration": 8.0,
+	"door_lock": 0,
+	"door_unlock": 1,
+	"turn_signal_enable": 1,
+	"turn_signal_disable": 0
+    },
+    "canbus":{
+	"id": {
+	    "door": 411,
+	    "signal": 392,
+	    "speed": 580
+	},
+	"position": {
+	    "door": 2,
+            "signal": 0,
+            "speed": 3
+	},
+	"length": {
+	    "door": 1,
+            "signal": 1,
+            "speed": 2
+	},
+	"message": {
+	    "left_signal": 1,
+	    "right_signal": 2,
+	    "door1": 1,
+	    "door2": 2,
+	    "door3": 4,
+	    "door4": 8
+	}
+    }
+}
